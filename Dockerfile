@@ -12,5 +12,8 @@ ADD --chown=keycloak:keycloak --chmod=644 https://github.com/ALMiG-Kompressoren-
 # Setting the build parameter for the database:
 ENV KC_DB=oracle
 
+ENV KC_HEALTH_ENABLED=true
+ENV KC_METRICS_ENABLED=true
+
 # To be able to use the image with the Keycloak Operator, it needs to be optimized, which requires Keycloak's build step:
 RUN /opt/keycloak/bin/kc.sh build
