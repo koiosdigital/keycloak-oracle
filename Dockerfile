@@ -1,7 +1,7 @@
 FROM quay.io/keycloak/keycloak:latest
 ADD --chown=keycloak:keycloak --chmod=644 https://repo1.maven.org/maven2/com/oracle/database/jdbc/ojdbc17/23.6.0.24.10/ojdbc17-23.6.0.24.10.jar /opt/keycloak/providers/ojdbc17.jar
 ADD --chown=keycloak:keycloak --chmod=644 https://repo1.maven.org/maven2/com/oracle/database/nls/orai18n/23.6.0.24.10/orai18n-23.6.0.24.10.jar /opt/keycloak/providers/orai18n.jar
-ADD --chown=keycloak:keycloak --chmod=644 https://github.com/klausbetz/apple-identity-provider-keycloak/releases/download/1.7.0/apple-identity-provider-1.7.0.jar /opt/keycloak/providers/apple-identity-provider-1.7.0.jar
+ADD --chown=keycloak:keycloak --chmod=644 https://github.com/klausbetz/apple-identity-provider-keycloak/releases/download/1.14.0/apple-identity-provider-1.14.0.jar /opt/keycloak/providers/apple-identity-provider-1.7.0.jar
 # Setting the build parameter for the database:
 ENV KC_DB=oracle
 # Add all other build parameters needed, for example enable health and metrics:
