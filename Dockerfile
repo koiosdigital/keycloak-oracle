@@ -15,5 +15,7 @@ ENV KC_DB=oracle
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
 
+RUN touch -m --date=@1743465600 /opt/keycloak/providers/*
+
 # To be able to use the image with the Keycloak Operator, it needs to be optimized, which requires Keycloak's build step:
 RUN /opt/keycloak/bin/kc.sh build
