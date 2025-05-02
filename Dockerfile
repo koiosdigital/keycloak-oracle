@@ -7,7 +7,7 @@ ADD --chown=keycloak:keycloak --chmod=644 https://repo1.maven.org/maven2/com/ora
 ADD --chown=keycloak:keycloak --chmod=644 https://github.com/klausbetz/apple-identity-provider-keycloak/releases/download/1.14.0/apple-identity-provider-1.14.0.jar /opt/keycloak/providers/apple-identity-provider-1.7.0.jar
 
 #theme
-ADD --chown=keycloak:keycloak --chmod=644 https://github.com/ALMiG-Kompressoren-GmbH/tailcloakify/releases/download/v1.1.9/keycloak-theme-for-kc-all-other-versions.jar /opt/keycloak/providers/keycloak-theme-for-kc-all-other-versions.jar
+ADD --chown=keycloak:keycloak --chmod=644 keycloak-theme-for-kc-all-other-versions.jar /opt/keycloak/providers/keycloak-theme-for-kc-all-other-versions.jar
 
 # Setting the build parameter for the database:
 ENV KC_DB=oracle
